@@ -1,0 +1,28 @@
+{
+  "name": "backend-mutation-service",
+  "version": "1.0.0",
+  "description": "service for process dna mutations",
+  "main": "app.js",
+  "scripts": {
+    "build": "serverless package",
+    "deploy-dev": "serverless deploy",
+    "api-start": "serverless offline -s dev",
+    "invoke-hello": "serverless invoke local --function hello --path events/data.json",
+    "test": "mocha --recursive --throw-deprecation --require node/register \\\"src/**/*.test.ts\\\"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "gitlab.com"
+  },
+  "author": "lautaro valeiras",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^1.80.0",
+    "serverless-offline": "^6.6.0",
+    "serverless-plugin-typescript": "^1.1.9",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "lambda-api": "^0.10.6"
+  }
+}
